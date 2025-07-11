@@ -13,7 +13,7 @@ function renderCities() {
   cityListDiv.innerHTML = '';
   cityListDiv.appendChild(title);
   
-  libraryData.forEach((item, idx) => {
+  ukLibraryData.forEach((item, idx) => {
     const btn = document.createElement('button');
     btn.className = 'city-btn' + (idx === currentCityIndex ? ' active' : '');
     btn.textContent = item.city;
@@ -28,7 +28,7 @@ function renderCities() {
 
 function renderLibraries() {
   libraryListDiv.innerHTML = '';
-  const libraries = libraryData[currentCityIndex].libraries;
+  const libraries = ukLibraryData[currentCityIndex].libraries;
   
   if (libraries.length === 0) {
     libraryListDiv.innerHTML = '<p style="text-align: center; color: #718096; font-size: 1.1rem;">No library information available for this city</p>';
@@ -86,4 +86,4 @@ document.addEventListener('keydown', function(event) {
 
 // Initialize
 renderCities();
-renderLibraries(); 
+renderLibraries();
