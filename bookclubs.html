@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>German Libraries Information</title>
+    <title>Book Clubs - Find Your Perfect Reading Community</title>
     <link rel="stylesheet" href="style.css">
     <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>📚</text></svg>">
 </head>
@@ -14,19 +14,19 @@
             <div class="nav-logo">
                 <a href="index.html">
                     <span class="logo-icon">📚</span>
-                    <span class="logo-text">Global Libraries</span>
+                    <span class="logo-text">City Library</span>
                 </a>
             </div>
             
             <div class="nav-menu">
-                <a href="index.html" class="nav-link">Chinese Libraries</a>
+                <a href="index.html" class="nav-link">Home</a>
                 <a href="germany.html" class="nav-link">German Libraries</a>
                 <a href="usa.html" class="nav-link">US Libraries</a>
                 <a href="uk.html" class="nav-link">UK Libraries</a>
                 <a href="france.html" class="nav-link">French Libraries</a>
                 <a href="canada.html" class="nav-link">Canadian Libraries</a>
                 <a href="bookclubs.html" class="nav-link">Book Clubs</a>
-                <a href="#" class="nav-link">Contact Us</a>
+                <a href="#contact" class="nav-link">Contact Us</a>
             </div>
             
             <div class="nav-toggle" id="nav-toggle">
@@ -38,21 +38,29 @@
     </nav>
     
     <header>
-        <h1>German Libraries Information</h1>
-        <p>Explore libraries across Germany</p>
+        <h1>Book Clubs Directory</h1>
+        <p>Discover vibrant reading communities across major cities</p>
         <div id="city-list">
             <h2>Select City</h2>
         </div>
     </header>
     <main>
-        <div id="library-list"></div>
+        <div id="bookclub-list"></div>
     </main>
+    
+    <!-- Modal for book club details -->
+    <div id="bookclub-modal" class="modal hidden">
+        <div class="modal-content">
+            <span class="close-btn">&times;</span>
+            <div id="bookclub-details"></div>
+        </div>
+    </div>
     
     <footer class="footer">
         <div class="footer-content">
             <div class="footer-section">
-                <h3>About Us</h3>
-                <p>Committed to providing the most comprehensive German library information for readers, making knowledge accessible.</p>
+                <h3>About Book Clubs</h3>
+                <p>Connect with fellow readers in your city through our curated directory of book clubs. From casual meetups to academic discussions, find the perfect reading community for you.</p>
                 <div class="social-links">
                     <a href="#" class="social-link">📧</a>
                     <a href="#" class="social-link">📱</a>
@@ -69,16 +77,19 @@
                     <li><a href="uk.html">UK Libraries</a></li>
                     <li><a href="france.html">French Libraries</a></li>
                     <li><a href="canada.html">Canadian Libraries</a></li>
+                    <li><a href="bookclubs.html">Book Clubs</a></li>
                 </ul>
             </div>
             
             <div class="footer-section">
-                <h3>Data Sources</h3>
+                <h3>Book Club Types</h3>
                 <ul class="footer-links">
-                    <li><a href="#">German National Library</a></li>
-                    <li><a href="#">State Libraries</a></li>
-                    <li><a href="#">University Libraries</a></li>
-                    <li><a href="#">Special Libraries</a></li>
+                    <li><a href="#">Contemporary Fiction</a></li>
+                    <li><a href="#">Classic Literature</a></li>
+                    <li><a href="#">Science Fiction & Fantasy</a></li>
+                    <li><a href="#">Non-Fiction & Memoirs</a></li>
+                    <li><a href="#">Academic & Scholarly</a></li>
+                    <li><a href="#">Multicultural Literature</a></li>
                 </ul>
             </div>
             
@@ -94,24 +105,18 @@
         
         <div class="footer-bottom">
             <div class="footer-bottom-content">
-                <p>&copy; 2024 German Library Information Network. All rights reserved.</p>
+                <p>&copy; 2024 City Library Online. All rights reserved.</p>
                 <div class="footer-bottom-links">
                     <a href="#">Privacy Policy</a>
                     <a href="#">Terms of Use</a>
-                    <a href="#">Sitemap</a>
+                    <a href="#">Cookie Policy</a>
                 </div>
             </div>
         </div>
     </footer>
     
-    <div id="library-modal" class="modal hidden">
-        <div class="modal-content">
-            <button class="close-btn">&times;</button>
-            <div id="library-details"></div>
-        </div>
-    </div>
-    <script src="germany-data.js"></script>
-    <script src="germany-script.js"></script>
+    <script src="bookclubs-data.js"></script>
+    <script src="bookclubs-script.js"></script>
     <script src="nav.js"></script>
 </body>
-</html> 
+</html>
