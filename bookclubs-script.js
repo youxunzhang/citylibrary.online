@@ -93,3 +93,4 @@ document.addEventListener('keydown', function(event) {
 // Initialize
 renderCities();
 renderBookClubs();
+
