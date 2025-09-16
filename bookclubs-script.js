@@ -37,14 +37,19 @@ function renderBookClubs() {
   
   bookClubs.forEach((club, idx) => {
     const card = document.createElement('div');
-    card.className = 'bookclub-card';
+    card.className = 'library-card';
     card.innerHTML = `
-      <h3>${club.name}</h3>
-      <p>📍 ${club.address}</p>
-      <p>📞 ${club.phone}</p>
-      <p>📅 ${club.meetingTime}</p>
-      <p>💰 ${club.membershipFee}</p>
-      <p>📖 Currently Reading: ${club.currentBook}</p>
+      <div class="library-image">
+        <img src="https://images.unsplash.com/photo-1481627834876-b7833e8f5570?w=400&h=200&fit=crop&crop=center" alt="${club.name}">
+      </div>
+      <div class="library-info">
+        <h3>${club.name}</h3>
+        <p>📍 ${club.address}</p>
+        <p>📞 ${club.phone}</p>
+        <p>📅 ${club.meetingTime}</p>
+        <p>💰 ${club.membershipFee}</p>
+        <p>📖 Currently Reading: ${club.currentBook}</p>
+      </div>
     `;
     card.onclick = () => showBookClubDetails(club);
     bookClubListDiv.appendChild(card);
@@ -53,14 +58,19 @@ function renderBookClubs() {
 
 function showBookClubDetails(club) {
   modalContent.innerHTML = `
-    <h2>${club.name}</h2>
-    <p><strong>📍 Address: </strong>${club.address}</p>
-    <p><strong>📞 Phone: </strong>${club.phone}</p>
-    <p><strong>🌐 Website: </strong><a href="${club.website}" target="_blank">${club.website}</a></p>
-    <p><strong>📅 Meeting Time: </strong>${club.meetingTime}</p>
-    <p><strong>💰 Membership Fee: </strong>${club.membershipFee}</p>
-    <p><strong>📖 Currently Reading: </strong>${club.currentBook}</p>
-    <p><strong>📖 Description: </strong>${club.description}</p>
+    <div class="modal-header">
+      <img src="https://images.unsplash.com/photo-1481627834876-b7833e8f5570?w=80&h=80&fit=crop&crop=center" alt="${club.name}">
+      <h2>${club.name}</h2>
+    </div>
+    <div class="modal-body">
+      <p><strong>📍 Address: </strong>${club.address}</p>
+      <p><strong>📞 Phone: </strong>${club.phone}</p>
+      <p><strong>🌐 Website: </strong><a href="${club.website}" target="_blank">${club.website}</a></p>
+      <p><strong>📅 Meeting Time: </strong>${club.meetingTime}</p>
+      <p><strong>💰 Membership Fee: </strong>${club.membershipFee}</p>
+      <p><strong>📖 Currently Reading: </strong>${club.currentBook}</p>
+      <p><strong>📖 Description: </strong>${club.description}</p>
+    </div>
   `;
   
   // Add animation effect
@@ -93,4 +103,3 @@ document.addEventListener('keydown', function(event) {
 // Initialize
 renderCities();
 renderBookClubs();
-

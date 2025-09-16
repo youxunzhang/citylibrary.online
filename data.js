@@ -1,317 +1,416 @@
 const libraryData = [
   {
-    city: "Beijing",
+    city: "北京",
     libraries: [
       {
-        name: "National Library of China",
-        address: "33 Zhongguancun South Street, Haidian District, Beijing",
+        name: "国家图书馆",
+        address: "北京市海淀区中关村南大街33号",
         phone: "010-88545426",
         website: "http://www.nlc.cn/",
-        description: "China's largest library with rich collections and modern service facilities."
+        description: "中国最大的图书馆，拥有丰富的馆藏和现代化的服务设施。",
+        image: "images/national-library.svg"
       },
       {
-        name: "Capital Library",
-        address: "88 East Third Ring South Road, Chaoyang District, Beijing",
+        name: "首都图书馆",
+        address: "北京市朝阳区东三环南路88号",
         phone: "010-67358114",
         website: "http://www.clcn.net.cn/",
-        description: "An important public library in Beijing serving the general public."
+        description: "北京市重要的公共图书馆，服务广大市民。",
+        image: "images/capital-library.svg"
       },
       {
-        name: "Peking University Library",
-        address: "5 Yiheyuan Road, Haidian District, Beijing",
+        name: "北京大学图书馆",
+        address: "北京市海淀区颐和园路5号",
         phone: "010-62751051",
         website: "https://lib.pku.edu.cn/",
-        description: "Peking University Library with a long history and rich collections."
+        description: "北京大学图书馆，历史悠久，馆藏丰富。",
+        image: "images/pku-library.svg"
       },
       {
-        name: "Tsinghua University Library",
-        address: "1 Tsinghua Garden, Haidian District, Beijing",
+        name: "清华大学图书馆",
+        address: "北京市海淀区清华园1号",
         phone: "010-62782137",
         website: "https://lib.tsinghua.edu.cn/",
-        description: "Tsinghua University Library with modern facilities."
+        description: "清华大学图书馆，现代化设施完善。",
+        image: "images/tsinghua-library.svg"
       },
       {
-        name: "Renmin University of China Library",
-        address: "59 Zhongguancun Street, Haidian District, Beijing",
+        name: "中国人民大学图书馆",
+        address: "北京市海淀区中关村大街59号",
         phone: "010-62511373",
         website: "https://lib.ruc.edu.cn/",
-        description: "Renmin University Library with rich humanities and social sciences collections."
+        description: "中国人民大学图书馆，人文社科类馆藏丰富。",
+        image: "images/ruc-library.svg"
       },
       {
-        name: "Beijing Normal University Library",
-        address: "19 Xinjiekou Outer Street, Haidian District, Beijing",
+        name: "北京师范大学图书馆",
+        address: "北京市海淀区新街口外大街19号",
         phone: "010-58806113",
         website: "https://lib.bnu.edu.cn/",
-        description: "Beijing Normal University Library with rich educational literature."
+        description: "北京师范大学图书馆，教育类文献丰富。",
+        image: "images/bnu-library.svg"
       },
       {
-        name: "Beijing Institute of Technology Library",
-        address: "5 Zhongguancun South Street, Haidian District, Beijing",
+        name: "北京理工大学图书馆",
+        address: "北京市海淀区中关村南大街5号",
         phone: "010-68914263",
         website: "https://lib.bit.edu.cn/",
-        description: "Beijing Institute of Technology Library with rich science and engineering collections."
+        description: "北京理工大学图书馆，理工科馆藏丰富。",
+        image: "images/bit-library.svg"
       },
       {
-        name: "Beihang University Library",
-        address: "37 Xueyuan Road, Haidian District, Beijing",
+        name: "北京航空航天大学图书馆",
+        address: "北京市海淀区学院路37号",
         phone: "010-82317024",
         website: "https://lib.buaa.edu.cn/",
-        description: "Beihang University Library with aerospace literature specialties."
+        description: "北京航空航天大学图书馆，航空航天类文献特色。",
+        image: "images/buaa-library.svg"
       }
     ]
   },
   {
-    city: "Shanghai",
+    city: "上海",
     libraries: [
       {
-        name: "Shanghai Library",
-        address: "1555 Huaihai Middle Road, Xuhui District, Shanghai",
+        name: "上海图书馆",
+        address: "上海市徐汇区淮海中路1555号",
         phone: "021-64455555",
         website: "https://www.library.sh.cn/",
-        description: "A famous modern large-scale library in China."
+        description: "中国著名的现代化大型图书馆。",
+        image: "images/shanghai-library.svg"
       },
       {
-        name: "Fudan University Library",
-        address: "220 Handan Road, Yangpu District, Shanghai",
+        name: "复旦大学图书馆",
+        address: "上海市杨浦区邯郸路220号",
         phone: "021-65642222",
         website: "https://www.library.fudan.edu.cn/",
-        description: "Fudan University Library, a comprehensive university library."
+        description: "复旦大学图书馆，综合性大学图书馆。",
+        image: "images/fudan-library.svg"
       },
       {
-        name: "Shanghai Jiao Tong University Library",
-        address: "800 Dongchuan Road, Minhang District, Shanghai",
+        name: "上海交通大学图书馆",
+        address: "上海市闵行区东川路800号",
         phone: "021-34206460",
         website: "https://www.lib.sjtu.edu.cn/",
-        description: "Shanghai Jiao Tong University Library with rich science and engineering collections."
+        description: "上海交通大学图书馆，理工科馆藏丰富。",
+        image: "images/sjtu-library.svg"
       },
       {
-        name: "Tongji University Library",
-        address: "1239 Siping Road, Yangpu District, Shanghai",
+        name: "同济大学图书馆",
+        address: "上海市杨浦区四平路1239号",
         phone: "021-65982200",
         website: "https://lib.tongji.edu.cn/",
-        description: "Tongji University Library with architectural literature specialties."
+        description: "同济大学图书馆，建筑类文献特色馆藏。",
+        image: "images/tongji-library.svg"
       },
       {
-        name: "East China Normal University Library",
-        address: "3663 North Zhongshan Road, Putuo District, Shanghai",
+        name: "华东师范大学图书馆",
+        address: "上海市普陀区中山北路3663号",
         phone: "021-62232317",
         website: "https://lib.ecnu.edu.cn/",
-        description: "East China Normal University Library with rich educational literature."
+        description: "华东师范大学图书馆，教育类文献丰富。",
+        image: "images/ecnu-library.svg"
       }
     ]
   },
   {
-    city: "Guangzhou",
+    city: "广州",
     libraries: [
       {
-        name: "Guangzhou Library",
-        address: "4 Zhujiang East Road, Guangzhou",
+        name: "广州图书馆",
+        address: "广州市珠江东路4号",
         phone: "020-83836666",
         website: "https://www.gzlib.org.cn/",
-        description: "A modern library located in Zhujiang New Town with unique architectural style."
+        description: "位于珠江新城的现代化图书馆，建筑风格独特。",
+        image: "images/guangzhou-library.svg"
       },
       {
-        name: "Sun Yat-sen University Library",
-        address: "135 Xin'gang West Road, Haizhu District, Guangzhou",
+        name: "中山大学图书馆",
+        address: "广州市海珠区新港西路135号",
         phone: "020-84111666",
         website: "https://library.sysu.edu.cn/",
-        description: "Sun Yat-sen University Library, a comprehensive university library."
+        description: "中山大学图书馆，综合性大学图书馆。",
+        image: "images/sysu-library.svg"
       },
       {
-        name: "South China University of Technology Library",
-        address: "381 Wushan Road, Tianhe District, Guangzhou",
+        name: "华南理工大学图书馆",
+        address: "广州市天河区五山路381号",
         phone: "020-87111474",
         website: "https://www.lib.scut.edu.cn/",
-        description: "South China University of Technology Library with rich science and engineering collections."
+        description: "华南理工大学图书馆，理工科馆藏丰富。",
+        image: "images/scut-library.svg"
       },
       {
-        name: "Jinan University Library",
-        address: "601 West Huangpu Avenue, Tianhe District, Guangzhou",
+        name: "暨南大学图书馆",
+        address: "广州市天河区黄埔大道西601号",
         phone: "020-85220223",
         website: "https://lib.jnu.edu.cn/",
-        description: "Jinan University Library with overseas Chinese literature specialties."
+        description: "暨南大学图书馆，华侨华人文献特色馆藏。",
+        image: "images/jnu-library.svg"
       }
     ]
   },
   {
-    city: "Shenzhen",
+    city: "深圳",
     libraries: [
       {
-        name: "Shenzhen Library",
-        address: "2014 Fuzhong Road, Futian District, Shenzhen",
+        name: "深圳图书馆",
+        address: "深圳市福田区福中路2014号",
         phone: "0755-82841200",
         website: "https://www.szlib.org.cn/",
-        description: "One of Shenzhen's landmark cultural facilities."
+        description: "深圳市标志性文化设施之一。",
+        image: "images/shenzhen-library.svg"
       },
       {
-        name: "Shenzhen University Library",
-        address: "3688 Nanhai Avenue, Nanshan District, Shenzhen",
+        name: "深圳大学图书馆",
+        address: "深圳市南山区南海大道3688号",
         phone: "0755-26536114",
         website: "https://lib.szu.edu.cn/",
-        description: "Shenzhen University Library with modern facilities."
+        description: "深圳大学图书馆，现代化设施完善。",
+        image: "images/szu-library.svg"
       },
       {
-        name: "Southern University of Science and Technology Library",
-        address: "1088 Xueyuan Avenue, Nanshan District, Shenzhen",
+        name: "南方科技大学图书馆",
+        address: "深圳市南山区学苑大道1088号",
         phone: "0755-88018000",
         website: "https://lib.sustech.edu.cn/",
-        description: "Southern University of Science and Technology Library, a new research university library."
+        description: "南方科技大学图书馆，新型研究型大学图书馆。",
+        image: "images/sustech-library.svg"
       }
     ]
   },
   {
-    city: "Hangzhou",
+    city: "杭州",
     libraries: [
       {
-        name: "Hangzhou Library",
-        address: "58 Jiefang East Road, Jianggan District, Hangzhou",
+        name: "杭州图书馆",
+        address: "杭州市江干区解放东路58号",
         phone: "0571-86535000",
         website: "https://www.hzlib.net/",
-        description: "An important public library in Hangzhou with beautiful environment and excellent services."
+        description: "杭州市重要的公共图书馆，环境优美，服务完善。",
+        image: "images/hangzhou-library.svg"
       },
       {
-        name: "Zhejiang University Library",
-        address: "866 Yuhangtang Road, Xihu District, Hangzhou",
+        name: "浙江大学图书馆",
+        address: "杭州市西湖区余杭塘路866号",
         phone: "0571-87951006",
         website: "https://libweb.zju.edu.cn/",
-        description: "Zhejiang University Library, a comprehensive research university library."
+        description: "浙江大学图书馆，综合性研究型大学图书馆。",
+        image: "images/zju-library.svg"
       },
       {
-        name: "Zhejiang Library",
-        address: "73 Shuguang Road, Xihu District, Hangzhou",
+        name: "浙江图书馆",
+        address: "杭州市西湖区曙光路73号",
         phone: "0571-87988500",
         website: "https://www.zjlib.cn/",
-        description: "Zhejiang Province's largest public library with a long history."
+        description: "浙江省最大的公共图书馆，历史悠久。",
+        image: "images/zhejiang-library.svg"
       }
     ]
   },
   {
-    city: "Nanjing",
+    city: "南京",
     libraries: [
       {
-        name: "Nanjing Library",
-        address: "189 East Zhongshan Road, Xuanwu District, Nanjing",
+        name: "南京图书馆",
+        address: "南京市玄武区中山东路189号",
         phone: "025-84356000",
         website: "https://www.jslib.org.cn/",
-        description: "Jiangsu Province's largest public library with a long history and rich collections."
+        description: "江苏省最大的公共图书馆，历史悠久，馆藏丰富。",
+        image: "images/nanjing-library.svg"
       },
       {
-        name: "Nanjing University Library",
-        address: "163 Xianlin Avenue, Qixia District, Nanjing",
+        name: "南京大学图书馆",
+        address: "南京市栖霞区仙林大道163号",
         phone: "025-83593183",
         website: "https://lib.nju.edu.cn/",
-        description: "Nanjing University Library, a comprehensive research university library."
+        description: "南京大学图书馆，综合性大学图书馆。",
+        image: "images/nju-library.svg"
       },
       {
-        name: "Southeast University Library",
-        address: "2 Sipailou, Xuanwu District, Nanjing",
-        phone: "025-83792888",
+        name: "东南大学图书馆",
+        address: "南京市玄武区四牌楼2号",
+        phone: "025-83792301",
         website: "https://lib.seu.edu.cn/",
-        description: "Southeast University Library with rich engineering and architecture collections."
+        description: "东南大学图书馆，建筑类文献特色馆藏。",
+        image: "images/seu-library.svg"
+      },
+      {
+        name: "南京师范大学图书馆",
+        address: "南京市栖霞区文苑路1号",
+        phone: "025-85891000",
+        website: "https://lib.njnu.edu.cn/",
+        description: "南京师范大学图书馆，教育类文献丰富。",
+        image: "images/njnu-library.svg"
       }
     ]
   },
   {
-    city: "Wuhan",
+    city: "成都",
     libraries: [
       {
-        name: "Wuhan Library",
-        address: "860 Jiefang Avenue, Jiang'an District, Wuhan",
-        phone: "027-85718003",
-        website: "https://www.whlib.org.cn/",
-        description: "Wuhan's main public library with comprehensive services."
-      },
-      {
-        name: "Wuhan University Library",
-        address: "299 Bayi Road, Wuchang District, Wuhan",
-        phone: "027-68752740",
-        website: "https://lib.whu.edu.cn/",
-        description: "Wuhan University Library, one of China's most beautiful university libraries."
-      },
-      {
-        name: "Huazhong University of Science and Technology Library",
-        address: "1037 Luoyu Road, Hongshan District, Wuhan",
-        phone: "027-87542283",
-        website: "https://lib.hust.edu.cn/",
-        description: "Huazhong University of Science and Technology Library with excellent science and engineering collections."
-      }
-    ]
-  },
-  {
-    city: "Chengdu",
-    libraries: [
-      {
-        name: "Chengdu Library",
-        address: "2 Wenweng Road, Qingyang District, Chengdu",
+        name: "成都图书馆",
+        address: "成都市青羊区文翁路98号",
         phone: "028-86126155",
         website: "https://www.cdclib.org/",
-        description: "Chengdu's main public library with traditional and modern collections."
+        description: "成都市重要的文化设施，为市民提供优质的阅读服务。",
+        image: "images/chengdu-library.svg"
       },
       {
-        name: "Sichuan University Library",
-        address: "24 South Section 1, First Ring Road, Wuhou District, Chengdu",
+        name: "四川大学图书馆",
+        address: "成都市武侯区望江路29号",
         phone: "028-85412334",
         website: "https://lib.scu.edu.cn/",
-        description: "Sichuan University Library, a comprehensive university library."
+        description: "四川大学图书馆，综合性大学图书馆。",
+        image: "images/scu-library.svg"
       },
       {
-        name: "University of Electronic Science and Technology Library",
-        address: "2006 Xiyuan Avenue, High-tech Zone, Chengdu",
-        phone: "028-61831234",
+        name: "电子科技大学图书馆",
+        address: "成都市成华区建设北路二段4号",
+        phone: "028-83202300",
         website: "https://lib.uestc.edu.cn/",
-        description: "University of Electronic Science and Technology Library with electronic information specialties."
+        description: "电子科技大学图书馆，电子信息类馆藏丰富。",
+        image: "images/uestc-library.svg"
+      },
+      {
+        name: "西南交通大学图书馆",
+        address: "成都市金牛区二环路北一段111号",
+        phone: "028-87600600",
+        website: "https://lib.swjtu.edu.cn/",
+        description: "西南交通大学图书馆，交通运输类文献特色。",
+        image: "images/swjtu-library.svg"
       }
     ]
   },
   {
-    city: "Xi'an",
+    city: "武汉",
     libraries: [
       {
-        name: "Shaanxi Library",
-        address: "146 Chang'an North Road, Beilin District, Xi'an",
-        phone: "029-85360063",
-        website: "https://www.sxlib.org.cn/",
-        description: "Shaanxi Province's largest public library with rich historical collections."
+        name: "武汉图书馆",
+        address: "武汉市江汉区建设大道861号",
+        phone: "027-85718003",
+        website: "https://www.whlib.org.cn/",
+        description: "武汉市重要的公共图书馆，现代化设施完善。",
+        image: "images/wuhan-library.svg"
       },
       {
-        name: "Xi'an Jiaotong University Library",
-        address: "28 Xianning West Road, Beilin District, Xi'an",
+        name: "武汉大学图书馆",
+        address: "武汉市武昌区珞珈山",
+        phone: "027-68752740",
+        website: "https://www.lib.whu.edu.cn/",
+        description: "武汉大学图书馆，综合性大学图书馆。",
+        image: "images/whu-library.svg"
+      },
+      {
+        name: "华中科技大学图书馆",
+        address: "武汉市洪山区珞瑜路1037号",
+        phone: "027-87542230",
+        website: "https://lib.hust.edu.cn/",
+        description: "华中科技大学图书馆，理工科馆藏丰富。",
+        image: "images/hust-library.svg"
+      },
+      {
+        name: "华中师范大学图书馆",
+        address: "武汉市洪山区珞喻路152号",
+        phone: "027-67868000",
+        website: "https://lib.ccnu.edu.cn/",
+        description: "华中师范大学图书馆，教育类文献丰富。",
+        image: "images/ccnu-library.svg"
+      }
+    ]
+  },
+  {
+    city: "西安",
+    libraries: [
+      {
+        name: "陕西省图书馆",
+        address: "西安市碑林区长安北路18号",
+        phone: "029-85360000",
+        website: "https://www.sxlib.org.cn/",
+        description: "陕西省最大的公共图书馆，历史悠久，馆藏丰富。",
+        image: "images/shaanxi-library.svg"
+      },
+      {
+        name: "西安交通大学图书馆",
+        address: "西安市碑林区咸宁西路28号",
         phone: "029-82667853",
         website: "https://lib.xjtu.edu.cn/",
-        description: "Xi'an Jiaotong University Library with excellent engineering collections."
+        description: "西安交通大学图书馆，综合性大学图书馆。",
+        image: "images/xjtu-library.svg"
       },
       {
-        name: "Northwest University Library",
-        address: "229 North Taibai Road, Beilin District, Xi'an",
-        phone: "029-88302560",
+        name: "西北工业大学图书馆",
+        address: "西安市碑林区友谊西路127号",
+        phone: "029-88492300",
+        website: "https://lib.nwpu.edu.cn/",
+        description: "西北工业大学图书馆，航空航天类馆藏丰富。",
+        image: "images/nwpu-library.svg"
+      },
+      {
+        name: "西北大学图书馆",
+        address: "西安市碑林区太白北路229号",
+        phone: "029-88302000",
         website: "https://lib.nwu.edu.cn/",
-        description: "Northwest University Library with rich humanities and social sciences collections."
+        description: "西北大学图书馆，综合性大学图书馆。",
+        image: "images/nwu-library.svg"
       }
     ]
   },
   {
-    city: "Tianjin",
+    city: "重庆",
     libraries: [
       {
-        name: "Tianjin Library",
-        address: "31 Youyi Road, Hexi District, Tianjin",
+        name: "重庆图书馆",
+        address: "重庆市渝中区长江一路11号",
+        phone: "023-63850361",
+        website: "https://www.cqlib.cn/",
+        description: "重庆市重要的公共图书馆，服务山城人民。",
+        image: "images/chongqing-library.svg"
+      },
+      {
+        name: "重庆大学图书馆",
+        address: "重庆市沙坪坝区沙正街174号",
+        phone: "023-65102300",
+        website: "https://lib.cqu.edu.cn/",
+        description: "重庆大学图书馆，综合性大学图书馆。",
+        image: "images/cqu-library.svg"
+      },
+      {
+        name: "西南大学图书馆",
+        address: "重庆市北碚区天生路2号",
+        phone: "023-68252300",
+        website: "https://lib.swu.edu.cn/",
+        description: "西南大学图书馆，综合性大学图书馆。",
+        image: "images/swu-library.svg"
+      }
+    ]
+  },
+  {
+    city: "天津",
+    libraries: [
+      {
+        name: "天津图书馆",
+        address: "天津市河西区平江道58号",
         phone: "022-83883600",
         website: "https://www.tjl.tj.cn/",
-        description: "Tianjin's main public library with comprehensive collections and services."
+        description: "天津市重要的公共图书馆，现代化设施完善。",
+        image: "images/tianjin-library.svg"
       },
       {
-        name: "Nankai University Library",
-        address: "94 Weijin Road, Nankai District, Tianjin",
+        name: "南开大学图书馆",
+        address: "天津市南开区卫津路94号",
         phone: "022-23508176",
         website: "https://lib.nankai.edu.cn/",
-        description: "Nankai University Library, a comprehensive university library."
+        description: "南开大学图书馆，综合性大学图书馆。",
+        image: "images/nankai-library.svg"
       },
       {
-        name: "Tianjin University Library",
-        address: "92 Weijin Road, Nankai District, Tianjin",
-        phone: "022-27406258",
+        name: "天津大学图书馆",
+        address: "天津市南开区卫津路92号",
+        phone: "022-27406244",
         website: "https://lib.tju.edu.cn/",
-        description: "Tianjin University Library with excellent engineering collections."
+        description: "天津大学图书馆，理工科馆藏丰富。",
+        image: "images/tju-library.svg"
       }
     ]
   }
