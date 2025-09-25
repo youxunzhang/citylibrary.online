@@ -5,6 +5,10 @@ const modal = document.getElementById('bookclub-modal');
 const modalContent = document.getElementById('bookclub-details');
 const closeBtn = document.querySelector('.close-btn');
 
+if (!cityListDiv || !bookClubListDiv || !modal || !modalContent || !closeBtn) {
+  return;
+}
+
 let currentCityIndex = 0;
 
 function renderCities() {
