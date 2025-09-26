@@ -1,7 +1,63 @@
+const TOTAL_LIBRARIES_PER_CITY = 100;
+
+const cityConfigs = {
+  "北京": { areaCode: "010", district: "海淀区", street: "文化大道" },
+  "上海": { areaCode: "021", district: "浦东新区", street: "知行路" },
+  "广州": { areaCode: "020", district: "天河区", street: "阅城大道" },
+  "深圳": { areaCode: "0755", district: "福田区", street: "书香路" },
+  "杭州": { areaCode: "0571", district: "滨江区", street: "悦读路" },
+  "南京": { areaCode: "025", district: "玄武区", street: "学府路" },
+  "成都": { areaCode: "028", district: "武侯区", street: "锦绣路" },
+  "武汉": { areaCode: "027", district: "武昌区", street: "知新路" },
+  "西安": { areaCode: "029", district: "雁塔区", street: "博雅路" },
+  "重庆": { areaCode: "023", district: "渝中区", street: "嘉陵路" },
+  "天津": { areaCode: "022", district: "河西区", street: "睿智路" }
+};
+
+function createSyntheticLibrary(city, number) {
+  const config = cityConfigs[city] || cityConfigs["北京"];
+  const paddedNumber = String(number).padStart(3, "0");
+  return {
+    name: `${city}城市图书馆 ${paddedNumber}`,
+    address: `${city}市${config.district}${config.street}${100 + number}号`,
+    phone: `${config.areaCode}-8000${String(number).padStart(4, "0")}`,
+    website: `https://library-${pinyinSlug(city)}-${paddedNumber}.example.com`,
+    description: `该图书馆提供多样化的图书与阅读服务，是${city}市居民的学习与交流空间。第${number}分馆。`,
+    image: "images/default-library.svg"
+  };
+}
+
+function pinyinSlug(city) {
+  const slugMap = {
+    "北京": "beijing",
+    "上海": "shanghai",
+    "广州": "guangzhou",
+    "深圳": "shenzhen",
+    "杭州": "hangzhou",
+    "南京": "nanjing",
+    "成都": "chengdu",
+    "武汉": "wuhan",
+    "西安": "xian",
+    "重庆": "chongqing",
+    "天津": "tianjin"
+  };
+  return slugMap[city] || city.toLowerCase();
+}
+
+function generateLibraries(city, baseLibraries) {
+  const libraries = baseLibraries.map((lib) => ({ ...lib }));
+
+  for (let i = libraries.length + 1; i <= TOTAL_LIBRARIES_PER_CITY; i++) {
+    libraries.push(createSyntheticLibrary(city, i));
+  }
+
+  return libraries;
+}
+
 const libraryData = [
   {
     city: "北京",
-    libraries: [
+    libraries: generateLibraries("北京", [
       {
         name: "国家图书馆",
         address: "北京市海淀区中关村南大街33号",
@@ -66,11 +122,11 @@ const libraryData = [
         description: "北京航空航天大学图书馆，航空航天类文献特色。",
         image: "images/buaa-library.svg"
       }
-    ]
+    ])
   },
   {
     city: "上海",
-    libraries: [
+    libraries: generateLibraries("上海", [
       {
         name: "上海图书馆",
         address: "上海市徐汇区淮海中路1555号",
@@ -111,11 +167,11 @@ const libraryData = [
         description: "华东师范大学图书馆，教育类文献丰富。",
         image: "images/ecnu-library.svg"
       }
-    ]
+    ])
   },
   {
     city: "广州",
-    libraries: [
+    libraries: generateLibraries("广州", [
       {
         name: "广州图书馆",
         address: "广州市珠江东路4号",
@@ -148,11 +204,11 @@ const libraryData = [
         description: "暨南大学图书馆，华侨华人文献特色馆藏。",
         image: "images/jnu-library.svg"
       }
-    ]
+    ])
   },
   {
     city: "深圳",
-    libraries: [
+    libraries: generateLibraries("深圳", [
       {
         name: "深圳图书馆",
         address: "深圳市福田区福中路2014号",
@@ -177,11 +233,11 @@ const libraryData = [
         description: "南方科技大学图书馆，新型研究型大学图书馆。",
         image: "images/sustech-library.svg"
       }
-    ]
+    ])
   },
   {
     city: "杭州",
-    libraries: [
+    libraries: generateLibraries("杭州", [
       {
         name: "杭州图书馆",
         address: "杭州市江干区解放东路58号",
@@ -206,11 +262,11 @@ const libraryData = [
         description: "浙江省最大的公共图书馆，历史悠久。",
         image: "images/zhejiang-library.svg"
       }
-    ]
+    ])
   },
   {
     city: "南京",
-    libraries: [
+    libraries: generateLibraries("南京", [
       {
         name: "南京图书馆",
         address: "南京市玄武区中山东路189号",
@@ -243,11 +299,11 @@ const libraryData = [
         description: "南京师范大学图书馆，教育类文献丰富。",
         image: "images/njnu-library.svg"
       }
-    ]
+    ])
   },
   {
     city: "成都",
-    libraries: [
+    libraries: generateLibraries("成都", [
       {
         name: "成都图书馆",
         address: "成都市青羊区文翁路98号",
@@ -280,11 +336,11 @@ const libraryData = [
         description: "西南交通大学图书馆，交通运输类文献特色。",
         image: "images/swjtu-library.svg"
       }
-    ]
+    ])
   },
   {
     city: "武汉",
-    libraries: [
+    libraries: generateLibraries("武汉", [
       {
         name: "武汉图书馆",
         address: "武汉市江汉区建设大道861号",
@@ -317,11 +373,11 @@ const libraryData = [
         description: "华中师范大学图书馆，教育类文献丰富。",
         image: "images/ccnu-library.svg"
       }
-    ]
+    ])
   },
   {
     city: "西安",
-    libraries: [
+    libraries: generateLibraries("西安", [
       {
         name: "陕西省图书馆",
         address: "西安市碑林区长安北路18号",
@@ -354,11 +410,11 @@ const libraryData = [
         description: "西北大学图书馆，综合性大学图书馆。",
         image: "images/nwu-library.svg"
       }
-    ]
+    ])
   },
   {
     city: "重庆",
-    libraries: [
+    libraries: generateLibraries("重庆", [
       {
         name: "重庆图书馆",
         address: "重庆市渝中区长江一路11号",
@@ -383,11 +439,11 @@ const libraryData = [
         description: "西南大学图书馆，综合性大学图书馆。",
         image: "images/swu-library.svg"
       }
-    ]
+    ])
   },
   {
     city: "天津",
-    libraries: [
+    libraries: generateLibraries("天津", [
       {
         name: "天津图书馆",
         address: "天津市河西区平江道58号",
@@ -412,6 +468,6 @@ const libraryData = [
         description: "天津大学图书馆，理工科馆藏丰富。",
         image: "images/tju-library.svg"
       }
-    ]
+    ])
   }
-]; 
+];
